@@ -1,0 +1,254 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background: url('https://i.postimg.cc/SQrYM1bf/capa.png') no-repeat center/cover;
+}
+
+.app-container {
+  width: 420px;
+  background: transparent;
+  border: 2px solid rgba(255, 255, 255, 0.2);
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  color: #fff;
+  backdrop-filter: blur(20px);
+  border-radius: 10px;
+  padding: 30px 40px;
+  margin: 20px; /* Added margin for spacing around the container */
+}
+
+h1, h2 {
+  font-size: 28px;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.tab-buttons {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 20px;
+  gap: 10px; /* Added gap for spacing between buttons */
+}
+
+.tab-buttons button {
+  width: 48%;
+  padding: 12px; /* Increased padding for better spacing */
+  background: rgba(255, 255, 255, 0.1);
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.tab-buttons button.active {
+  background: #fff;
+  color: #333;
+}
+
+.input-box {
+  width: 100%;
+  margin: 20px 0;
+}
+
+input[type="text"], input[type="number"], textarea {
+  width: 100%;
+  background: transparent;
+  border: 2px solid rgba(255, 255, 255, 0.2);
+  border-radius: 40px;
+  padding: 12px 20px; /* Increased padding for better spacing */
+  color: #fff;
+  font-size: 16px;
+}
+
+textarea {
+  height: 100px;
+  resize: vertical;
+}
+
+input::placeholder, textarea::placeholder {
+  color: rgba(255, 255, 255, 0.7);
+}
+
+button {
+  width: 100%;
+  height: 50px; /* Increased height for better button size */
+  background: #fff;
+  border: none;
+  border-radius: 40px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  cursor: pointer;
+  font-size: 18px;
+  color: #333;
+  font-weight: 600;
+  margin-top: 20px; /* Increased margin for spacing */
+}
+
+.user-info p {
+  margin-bottom: 15px; /* Increased margin for better spacing */
+}
+
+.todo-list {
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 10px;
+  padding: 20px;
+}
+
+.add-todo-form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px; /* Increased gap for spacing between form elements */
+  margin-bottom: 20px;
+}
+
+.input-group {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+}
+
+.input-group input {
+  flex-grow: 2;
+  padding: 12px; /* Increased padding for better spacing */
+  border-radius: 5px;
+  background: rgba(255, 255, 255, 0.2);
+  color: #fff;
+}
+
+.priority-select {
+  flex-grow: 1;
+  padding: 12px; /* Increased padding for better spacing */
+  border-radius: 5px;
+  background: rgba(255, 255, 255, 0.2);
+  color: #fff;
+}
+
+.add-btn {
+  padding: 12px; /* Increased padding for better button size */
+  border-radius: 5px;
+  background: #4CAF50;
+  color: white;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.add-btn:hover {
+  background: #45a049;
+}
+
+.filter-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+.filter-buttons button {
+  padding: 10px 20px; /* Increased padding for better button size */
+  border-radius: 5px;
+  background: rgba(255, 255, 255, 0.2);
+  color: #fff;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.filter-buttons button.active {
+  background: rgba(255, 255, 255, 0.4);
+}
+
+.todo-items {
+  display: flex;
+  flex-direction: column;
+  gap: 15px; /* Increased gap for spacing between items */
+}
+
+.todo-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: rgba(255, 255, 255, 0.1);
+  padding: 15px; /* Increased padding for better item size */
+  border-radius: 5px;
+  transition: background-color 0.3s;
+}
+
+.todo-item:hover {
+  background: rgba(255, 255, 255, 0.2);
+}
+
+.todo-item.low {
+  border-left: 5px solid #4CAF50;
+}
+
+.todo-item.medium {
+  border-left: 5px solid #FFC107;
+}
+
+.todo-item.high {
+  border-left: 5px solid #F44336;
+}
+
+.todo-content {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.todo-content input[type="checkbox"] {
+  margin: 0;
+}
+
+.todo-content span {
+  color: #fff;
+}
+
+.todo-content span.completed {
+  text-decoration: line-through;
+  opacity: 0.6;
+}
+
+.todo-actions {
+  display: flex;
+  gap: 10px;
+}
+
+.delete-btn {
+  padding: 8px 15px; /* Increased padding for better button size */
+  border-radius: 5px;
+  background: #F44336;
+  color: white;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.delete-btn:hover {
+  background: #D32F2F;
+}
+
+@media (max-width: 500px) {
+  .app-container {
+    width: 90%;
+    padding: 20px;
+  }
+
+  .todo-item {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .todo-actions {
+    margin-top: 10px;
+    width: 100%;
+    justify-content: space-between;
+  }
+}
